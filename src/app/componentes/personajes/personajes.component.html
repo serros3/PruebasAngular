@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-md-3 my-2" *ngFor="let personaje of personajes.results">
+    <div class="card">
+    <div class="card-header bg-info">
+    {{personaje.id}}. {{personaje.name}}
+    </div>
+    <img [src]="personaje.image" alt="{{personaje.name}}"
+    class="card-img-top">
+    <div class="card-body">
+    <p><strong>Gender: </strong>{{personaje.gender}}</p>
+    <p><strong>Species: </strong>{{personaje.species}}</p>
+    </div>
+    <div class="card-footer">
+    <p class="text-muted">
+    {{personaje.created | date: 'dd MMMM yyyy'}}
+    </p>
+    </div>
+    </div>
+    </div>
+    </div>
